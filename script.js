@@ -17,3 +17,41 @@ function getHumanChoice(){
     return player_choice;
 }
 
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice){
+    if (humanChoice == computerChoice){
+        return "draw";
+    }
+    else if (humanChoice == 'rock' && computerChoice == 'scissors'){
+        humanScore ++;
+        return 'you win';
+    }
+    else if (humanChoice == 'scissors' && computerChoice == 'paper'){
+        humanScore ++;
+        return 'you win';
+    }
+    else if (humanChoice == 'paper' && computerChoice == 'rock'){
+        humanScore ++;
+        return 'you win';
+    }
+    else if (computerChoice == 'rock' && humanChoice == 'scissors'){
+        computerScore++;
+        return 'you win';
+    }
+    else if (computerChoice == 'scissors' && humanChoice == 'paper'){
+        computerScore++;
+        return 'you win';
+    }
+    else if (computerChoice == 'paper' && humanChoice == 'rock'){
+        computerScore++;
+        return 'you win';
+    }
+}
+for (let i=0; i<5; i++){
+    let result = playRound(getHumanChoice(), getComputerChoice());
+    console.log(result);
+    console.log(`Score: you: ${humanScore}, computer: ${computerScore}`);
+    console.log('======================================================')
+}
