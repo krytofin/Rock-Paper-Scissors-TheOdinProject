@@ -38,15 +38,15 @@ function playRound(humanChoice, computerChoice){
     }
     else if (computerChoice == 'rock' && humanChoice == 'scissors'){
         computerScore++;
-        return 'you win';
+        return 'you lost';
     }
     else if (computerChoice == 'scissors' && humanChoice == 'paper'){
         computerScore++;
-        return 'you win';
+        return 'you lost';
     }
     else if (computerChoice == 'paper' && humanChoice == 'rock'){
         computerScore++;
-        return 'you win';
+        return 'you lost';
     }
 }
 for (let i=0; i<5; i++){
